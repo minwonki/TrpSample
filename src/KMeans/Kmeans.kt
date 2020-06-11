@@ -4,25 +4,12 @@ import java.util.*
 import kotlin.collections.HashMap
 import kotlin.math.max
 import kotlin.math.min
-import kotlin.math.pow
-import kotlin.math.sqrt
 
 /**
  * https://www.baeldung.com/java-k-means-clustering-algorithm
  */
 
 data class Record(val positionIndex: Int, val lat: Double, val lng: Double)
-
-interface Distance {
-    fun calculate(f1: Record, f2: Record): Double
-}
-
-class EuclideanDistance: Distance {
-    override fun calculate(f1: Record, f2: Record): Double {
-        val sum =  (f1.lat - f2.lat).pow(2) + (f1.lng - f2.lng).pow(2)
-        return sqrt(sum)
-    }
-}
 
 class KMeans {
 

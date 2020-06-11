@@ -5,7 +5,6 @@ import kotlin.system.measureTimeMillis
 
 
 fun main() {
-
     // Testing TSP
 //    val elapsed = measureTimeMillis {
 //        executeTsp()
